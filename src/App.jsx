@@ -22,30 +22,71 @@ export default function Miportafolio() {
             </div>
             <div className="w-full">
               <div className="flex justify-center">
-                <p className={`text-white bg-indigo-500 p-2 rounded-sm ${hovered ? 'hidden' :''} `}>Atrévete a acercarte, humano.</p>
+                <p className={`text-white bg-indigo-500 p-2 rounded-sm ${hovered ? 'hidden' : ''} `}>Atrévete a acercarte, humano.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="w-ful bg-blackl mt-20  bg-gradient-to-t from-indigo-950 bg-black px-10 py-40 rounded-lg text-white">
-          <h1 className="text-white text-5xl" >Mis proyectos destacados</h1>
-          <div className="flex">
-            <div className="w-full mt-5 border p-2 rounded-lg">
-              <h3 className="text text-3xl" >Sistema de gestion veterinaria</h3>
-              <img src="" alt="" />
-              <p>Este es una app web que permite registrar tus mascota y hacer gestion de sus servicios medicos</p>
-              <button>Entrar</button>
+        <div className="w-full bg-gradient-to-t from-indigo-950 to-black mt-20 px-10 py-20 rounded-lg text-white">
+          <h1 className="text-5xl font-bold mb-10">Mis proyectos destacados</h1>
+          <div className="flex justify-center space-x-16">
+            <div className="max-w-lg w-full border border-indigo-900 rounded-lg shadow-xl bg-white">
+              <h3 className="text-3xl font-bold text-indigo-900 p-4">Sistema de Gestión Veterinaria</h3>
+              <img className="w-full h-auto" src="https://i.ibb.co/S77FDSP/Captura-desde-2024-05-06-01-34-30.png" alt="Screenshot del Sistema de Gestión Veterinaria" />
+              <p className="p-4 text-lg text-gray-800">¡Bienvenido a nuestra plataforma digital para el cuidado de tus mascotas! Registra a tus compañeros peludos y administra fácilmente sus servicios médicos.</p>
+              <div className="flex justify-end p-4">
+                <button className="bg-indigo-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Entrar</button>
+              </div>
+              <div className="flex justify-between p-4 border-t border-gray-300">
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">React</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/next.png" alt="Next.js" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">Next.js</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">MySQL</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">Node.js</span>
+                </div>
+              </div>
             </div>
 
-            <div className="w-full mx-5 mt-5 border p-2 rounded-lg">
-              <h3>Anvic tienda onoline de productos</h3>
-              <img src="" alt="" />
-              <p>Este es un e-comerce online que esta en desarrollo</p>
-              <button>Entrar</button>
+            <div className="max-w-lg w-full border border-indigo-900 rounded-lg shadow-xl bg-white">
+              <h3 className="text-3xl font-bold text-indigo-900 p-4">Sistema de Gestión Veterinaria</h3>
+              <img className="w-full h-auto" src="https://i.ibb.co/S77FDSP/Captura-desde-2024-05-06-01-34-30.png" alt="Screenshot del Sistema de Gestión Veterinaria" />
+              <p className="p-4 text-lg text-gray-800">¡Bienvenido a nuestra plataforma digital para el cuidado de tus mascotas! Registra a tus compañeros peludos y administra fácilmente sus servicios médicos.</p>
+              <div className="flex justify-end p-4">
+                <button className="bg-indigo-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Entrar</button>
+              </div>
+              <div className="flex justify-between p-4 border-t border-gray-300">
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">React</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/next.png" alt="Next.js" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">Next.js</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">MySQL</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" className="w-8 h-8" />
+                  <span className="text-gray-800 font-semibold">Node.js</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
 
         <div className="w-full">
           <h1>Mis hablilidades tecnicas</h1>
