@@ -49,43 +49,82 @@ export default function Miportafolio() {
     }
   ];
 
-  const skills = [
+  const skillsAndJobs = [
     {
       name: "HTML & CSS",
       icon: "🌐",
       description: "Maquetación de interfaces estáticas y diseño responsive.",
+      year: "2021",
     },
     {
       name: "JavaScript",
       icon: "📜",
-      description: "Páginas intuitivas e interactivas.",
+      description: "Desarrollo de páginas interactivas y dinámicas.",
+      year: "2021",
     },
     {
       name: "Git",
       icon: "🌲",
-      description: "Gestión de versiones, `pull`, `push`, ramas organizadas.",
+      description: "Gestión de versiones con Git y flujo de trabajo en equipo.",
+      year: "2022",
     },
     {
       name: "SQL",
       icon: "💾",
-      description: "Creación y diseño de bases de datos.",
+      description: "Diseño y manejo de bases de datos relacionales.",
+      year: "2022",
+    },
+    {
+      year: 2022,
+      icon: "📚",
+      title: "Página de biblioteca",
+      description: "Desarrollé una página web para gestionar libros, usuarios y préstamos.",
     },
     {
       name: "Node.js & Express",
       icon: "⚙️",
-      description: "APIs, MVC, pagos con Mercado Pago.",
+      description: "Desarrollo de APIs RESTful y manejo de pagos con Mercado Pago.",
+      year: "2023",
     },
     {
       name: "React",
       icon: "⚛️",
-      description: "Interfaces de usuario modernas.",
+      description: "Desarrollo de interfaces de usuario modernas y escalables.",
+      year: "2023",
+    },
+    {
+      year: 2023,
+      icon: "💻",
+      title: "E-commerce Anvic Store",
+      description: "Desarrollé un e-commerce con React, integrando pagos y gestión de productos.",
     },
     {
       name: "Angular",
       icon: "🅰️",
-      description: "Desarrollo de interfaces intuitivas.",
+      description: "Creación de aplicaciones empresariales con Angular.",
+      year: "2024",
+    },
+    {
+      year: 2024,
+      icon: "🖥️",
+      title: "Página de Computadoras Personalizadas",
+      description: "Creé una plataforma para armar computadoras personalizadas según las necesidades del usuario.",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "🎨",
+      description: "Diseño rápido y flexible con clases utilitarias.",
+      year: "2024",
+    },
+    {
+      year: 2024,
+      icon: "🐾",
+      title: "Página de Veterinaria",
+      description: "Desarrollé una página web para gestionar citas y pacientes en una clínica veterinaria.",
     },
   ];
+
+
 
   return (
     <div className="bg-slate-50 w-full">
@@ -264,94 +303,35 @@ export default function Miportafolio() {
             ))}
           </div>
         </div>
+        <section className="py-12 px-6 bg-[#2d0a6e] text-white mt-20">
+          <h2 className="text-4xl font-bold text-center mb-10 tracking-tight text-white">
+            Mi Camino de Aprendizaje
+          </h2>
 
-        <div className="flex flex-col items-center p-8 bg-gray-900 text-gray-300 rounded-lg shadow-2xl w-full mt-40 h-responsive ">
-          <h2 className="text-3xl font-bold mb-10 text-gray-100">Mi Camino de Aprendizaje</h2>
-
-          {/* Línea de aprendizaje en zigzag para pantallas grandes, y en vertical para móviles */}
-          <div className="w-full relative mb-12 mt-10">
-            <svg className="hidden md:block w-full h-64" viewBox="0 0 100 30" preserveAspectRatio="none">
-              <polyline
-                points="5,5 20,25 35,5 50,25 65,5 80,25 95,5"
-                stroke="url(#lineGradient)"
-                strokeWidth="2.5"
-                fill="none"
-                strokeLinecap="round"
-                className="line-animation"
-              />
-              <defs>
-                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: '#1D4ED8', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#6366F1', stopOpacity: 1 }} />
-                </linearGradient>
-              </defs>
-            </svg>
-
-            {/* Tecnologías en línea vertical para móviles */}
-            <div className="absolute w-full md:flex md:flex-wrap md:justify-center md:items-center h-96 top-28 transform -translate-y-1/2 mx-10">
-              {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className={`text-gray-300 px-8 cursor-pointer hover:text-gray-200 transition duration-300 ease-in-out flex flex-col items-center m-4 
-            ${index % 2 === 0 ? 'md:mt-12' : 'md:mt-20'} 
-            ${index % 2 === 1 && 'md:order-1'}`}  // Alterna la posición en el zigzag
-                  title={`${skill.name} - Aprendido en ${skill.year}`}
-                >
-                  {/* Decoración: Iconos naturales animados */}
-                  {index % 2 === 1 && <div className="text-blue-300 text-lg mb-1 animate-float">🌊</div>}
-                  <div className="w-4 h-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mb-1 mx-auto" />
-
-                  {/* Nombre y descripción de la tecnología */}
-                  <div className="mt-2 text-center">
-                    <div className="font-semibold text-lg">{skill.icon} {skill.name}</div>
-                    <p className="text-white-400 text-sm">{skill.description}</p>
+          {/* Línea de tiempo de habilidades y trabajos */}
+          <div className="relative flex justify-center items-center mb-16">
+            <div className="absolute w-full h-1 bg-purple-800 top-1/2 transform -translate-y-1/2"></div>
+            <div className="overflow-x-auto w-full px-8 scrollbar-thin">
+              <div className="flex flex-nowrap justify-start">
+                {skillsAndJobs.map((item, index) => (
+                  <div
+                    key={index}
+                    className="relative flex flex-col items-center  mx-4 mb-8"
+                    style={{ left: `calc(${(index) * 14}%)` }}
+                  >
+                    <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-xl mb-2">
+                      {item.icon}
+                    </div>
+                    <div className="text-lg font-bold mb-1 text-white">{item.title || item.name}</div>
+                    <div className="text-sm text-gray-300 mb-2 w-44">{item.description}</div>
+                    <span className="mt-2 text-xs text-gray-400">{item.year}</span>
                   </div>
-
-                  {index % 2 === 0 && <div className="text-purple-300 text-lg mt-1 animate-float">⛰️</div>}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-
-          <style jsx>{`
-    /* Animación de la línea */
-    .line-animation {
-      animation: lineDraw 4s ease-in-out forwards;
-    }
-
-    @keyframes lineDraw {
-      0% {
-        stroke-dasharray: 0, 100;
-      }
-      100% {
-        stroke-dasharray: 100, 0;
-      }
-    }
-
-    /* Animación flotante para iconos */
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    @media (max-width: 740px){
-    
-    .h-responsive{
-       height: 990px;
-    }
-    
-    }
-  `}</style>
-        </div>
-
+        </section>      
+        
         {/* Habilidades Técnicas */}
         <div className="w-full mt-40">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-5">
@@ -400,11 +380,8 @@ export default function Miportafolio() {
             />
           </div>
         </div>
-
-
-
-
       </div>
+
       {/* Pie de Página */}
       <footer className="bg-indigo-950 text-white py-12 mt-20 w-full">
         <div className="container mx-auto px-6">
