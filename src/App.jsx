@@ -436,9 +436,6 @@ export default function Miportafolio() {
               <p className="text-sm">
                 Email: <a href="mailto:samuelvh2022@gmail.com" className="underline hover:text-gray-300">samuelvh2022@gmail.com</a>
               </p>
-              <p className="text-sm">
-                Teléfono: <a href="tel:+573213119578" className="underline hover:text-gray-300">+57 (321) 311-95-78</a>
-              </p>
             </div>
 
             {/* Sección Sobre Mí */}
@@ -451,12 +448,7 @@ export default function Miportafolio() {
 
           </div>
 
-          {/* Línea de Separación y Derechos Reservados */}
-          <div className="mt-10 border-t border-gray-700 pt-4 text-center">
-            <p className="text-sm text-gray-300">
-              &copy; {new Date().getFullYear()} Samuel Vasquez. Todos los derechos reservados.
-            </p>
-          </div>
+        
         </div>
       </footer>
 
