@@ -376,41 +376,55 @@ export default function Portfolio() {
           />
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Texto de presentación */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="prose prose-lg text-gray-700"
+              className="space-y-6"
             >
-              <p>
-                Soy un <strong>desarrollador Full Stack</strong> con sede en Bogotá, Colombia, especializado en construir aplicaciones web modernas y eficientes. Con formación en <strong>Análisis y Desarrollo de Software</strong> del SENA, combino conocimientos técnicos sólidos con una mentalidad orientada a resolver problemas.
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Sobre mí
+              </h2>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                Soy un <span className="font-semibold text-indigo-600 dark:text-indigo-400">desarrollador Full Stack</span> de Bogotá, Colombia, con formación en Análisis y Desarrollo de Software en el SENA. Me gusta construir aplicaciones web modernas y eficientes, siempre con la idea de aprender algo nuevo en el proceso.
               </p>
-              <p>
-                Mi enfoque va más allá de escribir código; me preocupo por crear <strong>experiencias de usuario excepcionales</strong> y soluciones que agreguen valor real a los negocios. Cuando no estoy programando, me gusta mantenerme actualizado con las últimas tendencias tecnológicas y contribuir a proyectos de código abierto.
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                Más que solo programar, disfruto diseñar soluciones que sean útiles y fáciles de usar. Me mantengo al día con las tendencias tecnológicas y, cuando puedo, participo en proyectos de código abierto.
               </p>
-              <p>
-                Actualmente estoy enfocado en profundizar mis conocimientos en <strong>arquitectura de software</strong> y <strong>desarrollo de aplicaciones escalables</strong>, siempre buscando nuevos desafíos que me permitan crecer profesionalmente.
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                Actualmente estoy profundizando en <span className="font-semibold">arquitectura de software</span> y <span className="font-semibold">desarrollo de aplicaciones escalables</span>, buscando retos que me ayuden a seguir creciendo como profesional.
               </p>
             </motion.div>
 
+            {/* Tarjeta de habilidades */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gray-50 p-8 rounded-xl shadow-md"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700"
             >
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Mis habilidades principales</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                Mis habilidades principales
+              </h3>
 
               {skills.map((skill, index) => (
-                <div key={index} className="flex items-start gap-4 mb-4">
-                  <div className="text-2xl">{skill.icon}</div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-700">{skill.name}</h4>
-                    <p className="text-gray-600 text-sm">{skill.description}</p>
-                    <div className="w-full bg-gray-200 h-2 rounded mt-1">
-                      <div className="bg-indigo-500 h-2 rounded" style={{ width: `${skill.level}%` }}></div>
+                <div key={index} className="flex items-start gap-4 mb-6">
+                  <div className="text-3xl">{skill.icon}</div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                      {skill.name}
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                      {skill.description}
+                    </p>
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full">
+                      <div
+                        className="bg-indigo-500 h-2 rounded-full transition-all duration-500"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -419,16 +433,28 @@ export default function Portfolio() {
               <div className="mt-8">
                 <a
                   href="#habilidades"
-                  className="text-indigo-600 hover:text-indigo-800 font-medium flex items-center"
+                  className="text-indigo-600 dark:text-indigo-400 hover:underline font-medium flex items-center"
                 >
                   Ver todas mis habilidades
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  <svg
+                    className="w-5 h-5 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
                   </svg>
                 </a>
               </div>
             </motion.div>
           </div>
+
         </div>
       </section>
 
